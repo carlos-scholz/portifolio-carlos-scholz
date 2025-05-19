@@ -1,0 +1,205 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #212121;
+    color: #333;
+    padding: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 160px; /* Keeps anchors visible below sticky header */
+}
+
+/* Header */
+header {
+    background-color: #6A0DAD;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 10px #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #FFF0F5;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Navigation Menu */
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: #ccc; /* Change to your hover color */
+    color: #000;
+}
+
+/* Section Layout */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section div {
+    background-color: #6A0DAD;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px #fff;
+    transition: transform 0.3s ease;
+}
+
+section div:hover {
+    transform: translateY(-5px);
+}
+
+/* Section Headings */
+section h2 {
+    margin-bottom: 15px;
+    color: #FFF0F5;
+    font-size: 1.8rem;
+    border-left: 4px solid #fff;
+    padding-left: 10px;
+}
+
+section h3 {
+    margin-bottom: 15px;
+    color: #FFF0F5;
+    font-size: 1.2rem;
+}
+
+/* Paragraphs */
+section p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Contact Form */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato label {
+    color: #fff;
+    font-weight: bold;
+}
+
+.form-contato input,
+.form-contato textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    outline: 2px solid #6A0DAD;
+    background-color: #fff;
+}
+
+.form-contato button {
+    padding: 10px 20px;
+    background-color: #6A3DAD;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+    background-color: #9B30FF;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    background-color: #6A0DAD;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FFF0F5;
+}
+
+footer p {
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+/* Social Media Icons */
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.social-links li a img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-links li a img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
